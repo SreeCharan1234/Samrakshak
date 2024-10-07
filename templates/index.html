@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanrakshak</title>
+    <link rel="icon" type="image/png" href="/static/favicon.png">
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/dashbordcss.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <style>
+    .sree {
+      background-image: url("../static/babround.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    .card:hover {
+      box-shadow: 4px 16px 32px 4px rgba(61, 203, 68, 0.615);
+      transform: scale(1.1);
+      transition: all ease-in-out 1.2;
+    }
+
+    .accordion-button {
+      background-color: rgb(10, 10, 10);
+      color: white;
+    }
+
+    .accordion-body {
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .more-questions {
+      border: 2px solid white;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 55%;
+      margin: auto;
+    }
+
+    .more-questions p:nth-child(1) {
+      text-align: center;
+      font-size: 40px;
+    }
+
+    .more-questions p:nth-child(3) {
+      font-size: 20px;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .more-questions button {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 20px;
+      font-size: 20px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .more-questions button:hover {
+      background-color: white;
+      color: black;
+    }
+
+/* Courses Start */
+  .dis-but h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: aliceblue;
+    text-align: center;
+  }
+  .cor{
+    width:350px;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 90px;
+    margin-left: 50px;
+    border-radius: 10px;
+    transition: 0.3s ease-out;
+    display:flex;
+    justify-content: space-evenly;
+    height:500px;
+    width:500px;
+    
+    
+    
+  }
+  .dis-but .but-set-1 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .dis-but .but-set-2 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .dis-but .but-set-1 button {
+    width: 135px;
+    border-radius: 5px;
+
+  }
+
+  .dis-but .but-set-2 button {
+    width: 135px;
+    border-radius: 5px;
+  }
+
+  .btntgl {
+    background-color: #C8C8C8;
+  }
+
+  header .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-primary {
+    background-color: transparent;
+    border: 3px solid aqua;
+  }
+
+  .btn-primary:hover {
+    background-color: aqua;
+    border: 3px solid aqua;
+    color: black;
+  }
+
+  .cor:hover {
+    transform: scale(1.05);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.507);
+  }
+
+  .cor-img {
+    height: 150px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0px 2px 5px rgb(167, 167, 167));
+  }
+
+  .cor-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    /* margin-left: -10px; */
+    /* margin-left:50px; */
+  }
+  #one1{
+    width:270px;
+  }
+  #one2{
+    width:270px;
+  }
+  #one3{
+    width:270px;
+  }
+  #one4{
+    width:270px;
+  }
+  #one5{
+    width:270px;
+  }
+  #one6{
+    width:270px;
+  }
+  /* Courses End */
+
+  </style>
+  <body>
+    <!-- AI bot icon starts-->
+    <a href="http://localhost:8501/" target="_blank" class="ai-bot-icon">
+      <img src="../static/aibot.png" alt="AI Bot Icon"
+    /></a>
+    <!-- AI bot icon ends-->
+    <nav class="sidebar">
+      <a href="index.html" class="logo">
+        <img
+          src="../static/photo/logob.png"
+          height="110px"
+          width="260px"
+          style="margin-bottom: -25px; margin-top: -5px"
+          alt="codemaster logo"
+        />
+      </a>
+
+      <div class="menu-content">
+        <ul class="menu-items" style="padding-left: 0rem">
+          <li class="item">
+            <a href="index.html"
+              ><i class="bx bxs-dashboard bx-tada"></i> Dashboard</a
+            >
+          </li>
+
+          <li class="item">
+            <a href="news.html"
+              ><i class='bx bxs-news bx-flashing bx-flip-vertical' ></i>Live Feed
+            </a>
+          </li>
+          <li class="item">
+            <a href="Courses.html"
+              ><i class='bx bx-list-ul bx-flashing bx-flip-vertical' ></i>EmpowerHer</a
+            >
+          </li>
+          <li class="item">
+            <a href="http://localhost:3000/"
+              ><i class="bx bx-rupee bx-flashing"></i> Donate</a>
+          </li>
+
+          <li class="item">
+            <a href="assessement.html"
+              ><i class="bx bxs-hourglass-top bx-tada"></i> GuardianEye</a
+            >
+          </li>
+          <li class="item">
+            <a href="dashboard.html">
+              <i class="bx bxs-video-plus bx-flashing"></i> HerSupport
+              Connect</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main">
+      <section class="sree">
+        <section class="mt-5 container mb-5">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner position-relative">
+              <div class="carousel-item active">
+                <img
+                  src="../static/cover/cover-1.jpg"
+                  class="d-block w-100 rounded"
+                  alt="cover 1"
+                  height="700px"
+                  width="612px"
+                />
+                <div
+                  class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
+                  style="--bs-bg-opacity: 0.5"
+                >
+                  <h1
+                    class="display-2 fw-bold w-75 sliderHeader"
+                    style="color: rgb(244, 148, 148)"
+                  >
+                    AI Guardian: Your Security Partner
+                  </h1>
+                  <p class="sliderPara">
+                    Explore a Range of AI-Powered Features: Facial recognition
+                    system, Digital Mentorship, Smart survillance system, and
+                    More
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../static/cover/cover-2.jpg"
+                  class="d-block w-100 rounded"
+                  alt="cover 2"
+                  height="700px"
+                  width="612px"
+                />
+                <div
+                  class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
+                  style="--bs-bg-opacity: 0.5"
+                >
+                  <h1
+                    class="display-2 fw-bold w-75 sliderHeader"
+                    style="color: rgb(244, 148, 148)"
+                  >
+                    Personal Digital Mentorship
+                  </h1>
+                  <p class="sliderPara">
+                    1:1 Personalized Query Resolution System Ensuring Privacy
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../static/cover/cover-1.png"
+                  
+                  class="d-block w-100 rounded"
+                  alt="cover 3"
+                  height="700px"
+                  width="612px"
+                />
+                <div
+                  class="container-fluid carousel-caption d-flex flex-column h-100 align-items-center justify-content-center p-5 position-absolute start-0 bottom-0 bg-black rounded"
+                  style="--bs-bg-opacity: 0.5"
+                >
+                  <h1
+                    class="display-2 fw-bold w-75 sliderHeader"
+                    style="color: rgb(244, 148, 148)"
+                  >
+                    Digital Surveillance Hub with Live News Feeds
+                  </h1>
+                  <p class="sliderPara">
+                    Get 360 Camera Survillance Using AI and Live Real Time News
+                    Feed
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev d-none d-md-block d-lg-block d-xl-block d-xxl-block"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next d-none d-md-block d-lg-block d-xl-block d-xxl-block"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+
+        <center>
+          <button type="button" class="btn btn-outline-primary btn-lg">FIND YOUR KNOWN ONE</button> &nbsp; &nbsp;
+          <button type="button" class="btn btn-outline-success btn-lg">FILE FIR</button> &nbsp; &nbsp;
+          <button type="button" class="btn btn-outline-danger btn-lg">Feeling unsafe! click here</button>
+        </center>
+        <!-- COURSE START -->
+        <div class="cor-row">
+            <div class="cor">
+              <img src="../static/shafe/POSH-ACT.jpg" alt="python" class="cor-img" />
+              <div class="dis-but">
+                <h2>POSH-ACT</h2>
+                <div class="but-set-1">
+                  <a href="https://wcd.nic.in/sites/default/files/Handbook%20on%20Sexual%20Harassment%20of%20Women%20at%20Workplace.pdf">
+                    <button type="button" class="btn btn-outline-success cor-buttons">
+                      Know more
+                    </button>
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=-G_wnZHVz90">
+                    <button type="button" class="btn btn-outline-info cor-buttons">
+                      Videos
+                    </button>
+                  </a>
+                </div>
+                <div class="but-set-2">
+                  <a href="/cheatsheet/cheat_html.html">
+                    <button type="button" class="btn btn-outline-info cor-buttons" id="one4">
+                      Cheat Sheets
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cor">
+              <img src="../static/shafe/reunion-act.jpg" alt="python" class="cor-img" />
+              <div class="dis-but">
+                <h2>Equal Remunerations Act 1976</h2>
+                <div class="but-set-1">
+                  <a href="https://labour.gov.in/sites/default/files/equal_remuneration_act_1976_0.pdf">
+                    <button type="button" class="btn btn-outline-success cor-buttons">
+                      Know more
+                    </button>
+                  </a>
+                  <a href="#">
+                    <button type="button" class="btn btn-outline-info cor-buttons">
+                      Videos
+                    </button>
+                  </a>
+                </div>
+                <div class="but-set-2">
+                  <a href="https://www.youtube.com/watch?v=Etg3TdynC2o">
+                    <button type="button" class="btn btn-outline-info cor-buttons" id="one5">
+                      Cheat Sheets
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cor">
+              <img src="../static/shafe/merriage-act.jpg" alt="python" class="cor-img" />
+              <div class="dis-but">
+                <h2>Marriage act</h2>
+                <div class="but-set-1">
+                  <a href="https://highcourtchd.gov.in/hclscc/subpages/pdf_files/4.pdf">
+                    <button type="button" class="btn btn-outline-success cor-buttons">
+                      Know more
+                    </button>
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=-MswioOyRFs">
+                    <button type="button" class="btn btn-outline-info cor-buttons">
+                      Videos
+                    </button>
+                  </a>
+                </div>
+                <div class="but-set-2">
+                  <a href="/cheatsheet/cheat_javascript.html">
+                    <button type="button" class="btn btn-outline-info cor-buttons" id="one6">
+                      Cheat Sheets
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cor-row">
+            <div class="cor">
+              <img src="../static/shafe/abortion-law.webp" alt="python" class="cor-img" />
+              <div class="dis-but">
+                <h2>Medical Termination of Pregnancy Act</h2>
+                <div class="but-set-1">
+                  <a href="https://www.indiacode.nic.in/bitstream/123456789/1593/1/A1971-34.pdf">
+                    <button type="button" class="btn btn-outline-success cor-buttons">
+                      Know more
+                    </button>
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=227LXbWI5N0">
+                    <button type="button" class="btn btn-outline-info cor-buttons">
+                      Videos
+                    </button>
+                  </a>
+                </div>
+                <div class="but-set-2">
+                  <a href="/cheatsheet/cheat_html.html">
+                    <button type="button" class="btn btn-outline-info cor-buttons" id="one4">
+                      Cheat Sheets
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cor">
+              <img src="../static/shafe/violence.jpg" alt="python" class="cor-img" />
+              <div class="dis-but">
+                <h2>Sexual abuse and exploitation</h2>
+                <div class="but-set-1">
+                  <a href="https://www.indiacode.nic.in/bitstream/123456789/1593/1/A1971-34.pdf">
+                    <button type="button" class="btn btn-outline-success cor-buttons">
+                      Know more
+                    </button>
+                  </a>
+                  <a href="#">
+                    <button type="button" class="btn btn-outline-info cor-buttons">
+                      Videos
+                    </button>
+                  </a>
+                </div>
+                <div class="but-set-2">
+                  <a href="https://www.youtube.com/watch?v=tEulz5dqQL4">
+                    <button type="button" class="btn btn-outline-info cor-buttons" id="one5">
+                      Cheat Sheets
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="cor">
+              <img src="../static/shafe/penal-code.jpg" alt="python" class="cor-img" />
+              <div class="dis-but">
+                <h2>The Penal code</h2>
+                <div class="but-set-1">
+                  <a href="https://lddashboard.legislative.gov.in/sites/default/files/A1860-45.pdf">
+                    <button type="button" class="btn btn-outline-success cor-buttons">
+                      Know more
+                    </button>
+                  </a>
+                  <a href="https://www.youtube.com/watch?v=-Ng-589Eq9E&list=PLyEIQpyzmtsrq4gkqfCz0xtCFNTkV3TSN">
+                    <button type="button" class="btn btn-outline-info cor-buttons">
+                      Videos
+                    </button>
+                  </a>
+                </div>
+                <div class="but-set-2">
+                  <a href="/cheatsheet/cheat_javascript.html">
+                    <button type="button" class="btn btn-outline-info cor-buttons" id="one6">
+                      Cheat Sheets
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        <!-- COURSE END -->
+
+        <!-- Developers Section Start -->
+        <section class="container mb-5 pt-5" id="ready">
+          <div>
+            <div class="mb-5 text-center text-md-start">
+              <h1 class="fw-bold pb-4" style="color: white">
+                Introducing Our Successful developers
+              </h1>
+              <p class="text-secondary">
+                Meet the developers and their role in this project
+              </p>
+            </div>
+            <div class="row g-3 mb-5">
+              <!-- Single Student -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="border rounded">
+                  <img
+                    src="../static/pic/pic/ksree.jpeg"
+                    class="img-fluid col-md-12 col-12 rounded"
+                    alt="Student 1"
+                  />
+                  <div class="ps-3 pt-3">
+                    <p class="text-secondary">
+                      <span class="text-light fw-bold">K Sree Charan</span
+                      ><br />AI ML Specialist.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Student -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="border rounded">
+                  <img
+                    src="../static/pic/pic/Abhi.jpeg
+                                "
+                    class="img-fluid col-md-12 col-12 rounded"
+                    alt="Student 2"
+                  />
+                  <div class="ps-3 pt-3">
+                    <p class="text-secondary">
+                      <span class="text-light fw-bold">Abhishek Roy</span
+                      ><br />Back End Developer
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Student -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="border rounded">
+                  <img
+                    src="../static/pic/pic/ritik.jpeg"
+                    class="img-fluid col-md-12 col-12 rounded"
+                    alt="Student 3"
+                    style="overflow: hidden"
+                  />
+                  <div class="ps-3 pt-3">
+                    <p class="text-secondary">
+                      <span class="fw-bold text-light">Ritik Kumar </span
+                      ><br />Back End and UI Designer
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Student -->
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="border rounded">
+                  <img
+                    src="../static/pic/pic/shafe.jpeg"
+                    class="img-fluid col-md-12 col-12 rounded"
+                    alt="Student 3"
+                    style="overflow: hidden"
+                  />
+                  <div class="ps-3 pt-3">
+                    <p class="text-secondary">
+                      <span class="fw-bold text-light">Shafe Ashan</span
+                      ><br />Web CSS & UI Specialist
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Developers Section End -->
+
+        <!-- Students Feedback Start -->
+        <section class="container">
+          <div>
+            <div class="text-center">
+              <h1 class="fw-bolder" style="color: white">
+                Some complainant Feedback
+              </h1>
+              <p>Here is some feedback from the complainant</p>
+            </div>
+            <div>
+              <div class="row g-3 mb-5">
+                <!-- Single Student Feedback -->
+                <div class="col-lg-6">
+                  <div class="border rounded p-4">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                      </div>
+                    </div>
+                    <div class="py-3">
+                      <p class="text-secondary">
+                        “Sanrakshak helped me quickly find my children lost on a
+                        busy railway platform. The alert system and user network
+                        were efficient, leading to a swift and happy reunion.
+                        Highly recommend for any parent!”
+                      </p>
+                    </div>
+                    <div class="d-flex">
+                      <p class="ps-3 text-secondary">
+                        <span class="text-light fw-bold">Awlad Hossain</span
+                        ><br />Web Developer
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Single Student Feedback -->
+                <div class="col-lg-6">
+                  <div class="border rounded p-4">
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-solid fa-star text-warning"></i>
+                        <i class="fa-regular fa-star text-warning"></i>
+                      </div>
+                    </div>
+                    <div class="py-3">
+                      <p class="text-secondary">
+                        “Sanrakshak proved invaluable in assisting the police to
+                        apprehend a thief at the railway station. Its alert
+                        system and community vigilance made the search
+                        efficient, leading to a quick arrest. It’s a
+                        game-changer for public safety!”
+                      </p>
+                    </div>
+                    <div class="d-flex" id="faq">
+                      <p class="ps-3 text-secondary">
+                        <span class="fw-bold text-light">Shanta Akter</span
+                        ><br />Graphic Designer
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mb-5 d-lg-none">
+            <button class="btn btn-primary fw-bold px-4 py-2">View All</button>
+          </div>
+        </section>
+        <!-- Students Feedback End -->
+
+        <!-- Accordion Start -->
+        <section class="container">
+          <div class="text-center mb-5">
+            <h1 class="fw-bold" style="color: white">
+              Frequently Asked Questions
+            </h1>
+            <p class="text-secondary">
+              Some frequently asked questions answers are given below,
+            </p>
+          </div>
+          <div class="accordion" id="accordionExample">
+            <!-- 1st Question -->
+            <div class="accordion-item my-4 border-0">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button fw-bold border rounded-2"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  will it protect even if someone try to follow me and wanted me
+                  to bully me or kidnap?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-secondary">
+                  The Sanrakshak app is designed to enhance safety and provide
+                  assistance in various situations. While the specific features
+                  of the app related to personal safety against being followed,
+                  bullied, or potential kidnapping are not detailed in the
+                  search results, apps of this nature typically include features
+                  such as: Alerts: Sending instant alerts to contacts or
+                  authorities with your location. Real-time Location Sharing:
+                  Allowing trusted contacts to track your location in real-time.
+                  Community Watch: Leveraging a network of users who can respond
+                  to alerts.
+                </div>
+              </div>
+            </div>
+            <!-- 2nd Question -->
+            <div class="accordion-item my-4 border-0">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed fw-bold border rounded-2"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Can Sanrakshak be used to find lost children in crowded
+                  places?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-secondary">
+                  Yes, Sanrakshak can be used to find lost children in crowded
+                  places. Users can send out an alert with a description of the
+                  missing child, along with their last known location. The app’s
+                  community can then be on the lookout and provide updates if
+                  the child is spotted, significantly increasing the chances of
+                  a quick and safe reunion.
+                </div>
+              </div>
+            </div>
+            <!-- 3rd Question -->
+            <div class="accordion-item my-4 border-0">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed fw-bold border rounded-2"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  How does the real-time location tracking feature work in
+                  Sanrakshak?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-secondary">
+                  The real-time location tracking feature in Sanrakshak allows
+                  users to share their live location with selected contacts or
+                  within the app’s community. This feature is particularly
+                  useful in emergency situations where a user’s immediate
+                  location is crucial for receiving help. The app uses GPS
+                  technology to provide accurate and up-to-date location
+                  information.
+                </div>
+              </div>
+            </div>
+            <!-- 4th Question -->
+            <div class="accordion-item my-4 border-0">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed fw-bold border rounded-2"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                >
+                  What should a user do if they feel threatened or are being
+                  followed?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-secondary">
+                  If a user feels threatened or believes they are being
+                  followed, they should use Sanrakshak to send an immediate
+                  alert to their trusted contacts and the app’s community. The
+                  alert should include their current location and any pertinent
+                  information about the threat. Users are also advised to move
+                  to a safe, public place if possible and contact local
+                  authorities for immediate assistance.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Accordion End -->
+
+        <!-- More Questions Start  -->
+        <div class="more-questions">
+          <p>STILL HAVE QUESTIONS!!</p>
+          <div class="doodle-icons">
+            <img src="images/moreQuestions/dood1.png" alt="" />
+            <img src="images/moreQuestions/dood2.png" alt="" />
+            <img src="images/moreQuestions/dood3.png" alt="" />
+          </div>
+          <p>
+            If you cannot find answers to your questions in our FAQ, you can
+            always contact us. We will answer to you asap
+          </p>
+          <button>Contact Us</button>
+        </div>
+        <!-- More Questions end  -->
+        <!-- <section class="sree-course">
+                <h1 style="color: white;">My courses</h1>
+                <div class="course-box">
+                    <ul>
+                        <li class="active">In progress</li>
+                        <li>explore</li>
+                        <li>incoming</li>
+                        <li>finished</li>
+                    </ul>
+                    <div class="course">
+                        <div class="box">
+                            <h3 style="color: aliceblue;">HTML</h3>
+                            <p style="color: white;">80% - progress</p>
+                            <button>continue</button>
+                            <i class="fab fa-html5 html"></i>
+                        </div>
+                        <div class="box">
+                            <h3 style="color: aliceblue;">CSS</h3>
+                            <p style="color: white;">50% - progress</p>
+                            <button>continue</button>
+                            <i class="fab fa-css3-alt css"></i>
+                        </div>
+                        <div class="box">
+                            <h3 style="color: aliceblue;">JavaScript</h3>
+                            <p style="color: white;">30% - progress</p>
+                            <button>continue</button>
+                            <i class="fab fa-js-square js"></i>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+      </section>
+    </main>
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const sidebar = document.querySelector(".sidebar");
+      const sidebarClose = document.querySelector("#sidebar-close");
+      const menu = document.querySelector(".menu-content");
+      const menuItems = document.querySelectorAll(".submenu-item");
+      const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+
+      sidebarClose.addEventListener("click", () =>
+        sidebar.classList.toggle("close")
+      );
+
+      menuItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          menu.classList.add("submenu-active");
+          item.classList.add("show-submenu");
+          menuItems.forEach((item2, index2) => {
+            if (index !== index2) {
+              item2.classList.remove("show-submenu");
+            }
+          });
+        });
+      });
+
+      subMenuTitles.forEach((title) => {
+        title.addEventListener("click", () => {
+          menu.classList.remove("submenu-active");
+        });
+      });
+
+      console.log(menuItems, subMenuTitles);
+    </script>
+  </body>
+</html>

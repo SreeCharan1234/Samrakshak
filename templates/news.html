@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- YouTube or Website - CodingLab -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanrakshak</title>
+    <link rel="stylesheet" href="../static/style.css"/>
+    <link rel="stylesheet" href="../static/home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />   
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  </head>
+  <style>
+    .sree {
+        background-image: url("../static/babround.jpg" );
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container{
+      margin-left: 150px;
+        
+    }
+  </style>
+  
+  <body>
+    
+    <!-- AI bot icon starts-->
+        <a href="http://localhost:8501/" target="_blank" class="ai-bot-icon">
+            <img src="../static/aibot.png" alt="AI Bot Icon"></a>
+        <!-- AI bot icon ends-->
+        <nav class="sidebar">
+          <a href="index.html" class="logo">
+            <img
+          src="../static/photo/logob.png"
+          height="110px"
+          width="260px"
+          style="margin-bottom: -25px; margin-top: -5px"
+          alt="codemaster logo"
+        />
+        </a>
+          <div class="menu-content">
+              <ul class="menu-items" style="padding-left: 0rem;">
+                <li class="item">
+                  <a href="index.html"><i class='bx bxs-dashboard bx-tada'></i> Dashboard</a>
+              </li>
+              
+              <li class="item">
+                  <a href="news.html"><i class='bx bxs-group bx-flashing'></i> Live Feed </a>
+              </li>
+              <li class="item">
+                  <a href="Courses.html"><i class='bx bxs-book-open bx-tada'></i>EmpowerHer</a>
+              </li>
+              <li class="item">
+                  <a href="http://localhost:3000/"><i class='bx bx-rupee bx-flashing'></i> Paid Courses</a>
+              </li>
+
+              <li class="item">
+                  <a href="assessement.html"><i class='bx bxs-hourglass-top bx-tada'></i> GaurdianEye</a>
+              </li>
+              <li class="item">
+                  <a href="dashboard.html"> <i class='bx bxs-video-plus bx-flashing'></i> HerSupport Connect</a>
+              </li>
+                  
+  
+              </ul>
+          </div>
+      </nav>
+
+       
+
+    <main class="main">
+
+        <section class="section blog has-bg-image" id="blog" aria-label="blog"
+        
+        <div class="sree">
+          
+        <div class="container">
+
+          <p class="section-subtitle">Our Students</p>
+
+          <h2 class="h2 section-title">Details of our Students</h2>
+
+          <ul class="grid-list">
+            {% for news in case.articles %}
+            
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                  <img src="{{news.urlToImage}}" width="370" height="370" loading="lazy"
+                    alt="Become A Better Blogger: Content Planning" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <a href="#" class="card-btn" aria-label="read more">
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+                  <a href="#" class="card-subtitle">Student Profile</a>
+                  <a href="#" class="card-subtitle">Name :- {{news.title}}</a>
+
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">DOB:-</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Com 09</span>
+                    </li>
+
+                  </ul>
+                  
+                  <!-- <h3 class="h3">
+                    <a href="#" class="card-title">Total-course:- </a>
+                  </h3>
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Total-Marks:-</a>
+                  </h3>
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Course:-</a>
+                  </h3>
+                  <p class="card-text">
+                        
+                    
+                  </p> -->
+
+                </div>
+
+              </div>
+            </li>
+            {%endfor%}
+           
+
+          </ul>
+<!-- 
+          <img src="../static/assets/images/blog-shape.png" width="186" height="186" loading="lazy" alt=""
+            class="shape blog-shape"> -->
+
+        </div>
+        </div>
+      </section>
+       
+    
+    </main>
+    <!-- 
+    - custom js link
+  -->
+  <script src="../static/assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+      <script>const sidebar = document.querySelector(".sidebar");
+        const sidebarClose = document.querySelector("#sidebar-close");
+        const menu = document.querySelector(".menu-content");
+        const menuItems = document.querySelectorAll(".submenu-item");
+        const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
+        
+        sidebarClose.addEventListener("click", () => sidebar.classList.toggle("close"));
+        
+        menuItems.forEach((item, index) => {
+          item.addEventListener("click", () => {
+            menu.classList.add("submenu-active");
+            item.classList.add("show-submenu");
+            menuItems.forEach((item2, index2) => {
+              if (index !== index2) {
+                item2.classList.remove("show-submenu");
+              }
+            });
+          });
+        });
+        
+        subMenuTitles.forEach((title) => {
+          title.addEventListener("click", () => {
+            menu.classList.remove("submenu-active");
+          });
+        });
+        
+        console.log(menuItems, subMenuTitles);
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+        </script>
+  </body>
+</html>
